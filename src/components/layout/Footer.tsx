@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { getAllGames } from "@/lib/games";
-import { t, type Locale } from "@/i18n/messages";
+import { getAllGames } from "../../lib/games";
+import { t, type Locale } from "../../i18n/messages";
 
 export default function Footer() {
   const games = getAllGames();

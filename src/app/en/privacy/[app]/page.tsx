@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { getAllGames, getGameBySlug } from "@/lib/games";
+import { getAllGames, getGameBySlug } from "../../../../lib/games";
 import { notFound } from "next/navigation";
-import PrivacyPolicyPage from "@/components/privacy/PrivacyPolicyPage";
+import PrivacyPolicyPage from "../../../../components/privacy/PrivacyPolicyPage";
 
 interface PrivacyPageParams {
   params: Promise<{ app: string }>;

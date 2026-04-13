@@ -1,8 +1,8 @@
-import GameCard from "@/components/ui/GameCard";
-import { getAllGames } from "@/lib/games";
-import { t, type Locale } from "@/i18n/messages";
+import GameCard from "../ui/GameCard";
+import { getAllGames } from "../../lib/games";
+import { t, type Locale } from "../../i18n/messages";
 import { Sparkles, Gamepad2 } from "lucide-react";
-import NodinWordmarkHero from "@/components/ui/NodinWordmarkHero";
+import NodinWordmarkHero from "../ui/NodinWordmarkHero";
 
 interface HomePageProps {
   locale: Locale;
