@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 720">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" />
+      <stop offset="1" stop-color="#f6f6f7" />
+    </linearGradient>
+    <radialGradient id="glow" cx="55%" cy="45%" r="55%">
+      <stop offset="0" stop-color="#111827" stop-opacity="0.10" />
+      <stop offset="0.55" stop-color="#111827" stop-opacity="0.04" />
+      <stop offset="1" stop-color="#111827" stop-opacity="0" />
+    </radialGradient>
+    <pattern id="lines" width="16" height="16" patternUnits="userSpaceOnUse">
+      <path d="M0 16 L16 0" stroke="#09090b" stroke-opacity="0.04" stroke-width="1" />
+    </pattern>
+  </defs>
+
+  <rect width="1440" height="720" fill="url(#bg)" />
+  <rect width="1440" height="720" fill="url(#lines)" opacity="0.9" />
+  <rect width="1440" height="720" fill="url(#glow)" />
+
+  <!-- subtle skewed blocks -->
+  <path d="M0 520 L1440 440 L1440 720 L0 720 Z" fill="#09090b" opacity="0.03" />
+  <path d="M0 620 L1440 540 L1440 720 L0 720 Z" fill="#09090b" opacity="0.02" />
+</svg>
+

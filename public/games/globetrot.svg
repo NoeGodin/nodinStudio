@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#f6f6f7"/>
+    </linearGradient>
+    <radialGradient id="r" cx="42%" cy="40%" r="60%">
+      <stop offset="0" stop-color="#111827" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#111827" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="600" rx="32" fill="url(#g)"/>
+  <rect width="1200" height="600" rx="32" fill="url(#r)"/>
+
+  <!-- globe -->
+  <g transform="translate(700 300)">
+    <circle r="170" fill="#09090b" opacity="0.04"/>
+    <circle r="168" fill="none" stroke="#09090b" stroke-opacity="0.16" stroke-width="2"/>
+    <ellipse rx="168" ry="70" fill="none" stroke="#09090b" stroke-opacity="0.10" stroke-width="2"/>
+    <ellipse rx="70" ry="168" fill="none" stroke="#09090b" stroke-opacity="0.10" stroke-width="2"/>
+    <path d="M-168 0 H168" stroke="#09090b" stroke-opacity="0.10" stroke-width="2"/>
+    <path d="M-120 -95 C-60 -130 10 -130 70 -110 C120 -92 120 -40 70 -20 C35 -5 -5 5 -45 30 C-95 60 -135 30 -120 -10 C-110 -45 -150 -70 -120 -95 Z"
+          fill="#09090b" opacity="0.06"/>
+  </g>
+
+  <!-- label -->
+  <g transform="translate(70 90)">
+    <rect x="0" y="0" width="320" height="44" rx="22" fill="#09090b" opacity="0.04"/>
+    <text x="18" y="28" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace"
+          font-size="14" fill="#09090b" fill-opacity="0.70" letter-spacing="3">
+      GLOBETROT
+    </text>
+  </g>
+</svg>
+

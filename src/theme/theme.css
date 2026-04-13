@@ -1,0 +1,84 @@
+/* Design tokens: tweak these to restyle the whole site */
+:root {
+  --color-surface: #ffffff;
+  --color-surface-raised: #f6f6f7;
+  --color-text-primary: #09090b;
+  --color-text-muted: #52525b;
+
+  /* Duolingo-ish playful palette (still clean) */
+  --color-accent: #58cc02; /* duo green */
+  --color-accent-ink: #0b2b0b;
+  --color-accent-dim: rgba(88, 204, 2, 0.16);
+  --color-sky: #1cb0f6;
+  --color-violet: #ce82ff;
+  --color-sun: #ffde00;
+
+  --radius-lg: 1.1rem;
+  --radius-xl: 1.45rem;
+  --radius-pill: 9999px;
+  --radius-sharp: 0.9rem;
+
+  --padding-vertical: 5rem;
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Playful UI helpers */
+.sticker {
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(9, 9, 11, 0.1);
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow:
+    0 1px 0 rgba(9, 9, 11, 0.04),
+    0 18px 50px rgba(9, 9, 11, 0.08);
+}
+
+.btn-duo {
+  border-radius: var(--radius-pill);
+  background: var(--color-accent);
+  color: #0b2b0b;
+  border: 1px solid rgba(9, 9, 11, 0.12);
+  box-shadow:
+    0 8px 0 rgba(11, 43, 11, 0.18),
+    0 18px 50px rgba(9, 9, 11, 0.10);
+  transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+.btn-duo:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    0 9px 0 rgba(11, 43, 11, 0.18),
+    0 22px 60px rgba(9, 9, 11, 0.12);
+}
+
+.btn-duo:active {
+  transform: translateY(2px);
+  box-shadow:
+    0 6px 0 rgba(11, 43, 11, 0.18),
+    0 14px 40px rgba(9, 9, 11, 0.10);
+}
+
+.card-duo {
+  border-radius: var(--radius-sharp);
+  border: 1px solid rgba(9, 9, 11, 0.14);
+  background: #fff;
+  box-shadow:
+    0 1px 0 rgba(9, 9, 11, 0.04),
+    0 22px 70px rgba(9, 9, 11, 0.10);
+}
+
+.ring-duo {
+  outline: 3px solid rgba(88, 204, 2, 0.25);
+  outline-offset: 2px;
+}
+
+/* Skewed blocks */
+.block--skewed-right {
+  padding-bottom: calc(var(--padding-vertical) + 4rem);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+}
+
+.block--skewed-left {
+  padding-bottom: calc(var(--padding-vertical) + 4rem);
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+}
+
