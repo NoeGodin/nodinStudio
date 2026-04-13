@@ -11,13 +11,12 @@ const fr: Messages = {
   "home.hero.badge": "",
   "home.hero.title": "Petits jeux.",
   "home.hero.subtitle": "Design clean. Un peu nerd.",
-  "home.hero.lede":
-    "NODIN Studio crée des jeux mobile “pocket-sized” qui récompensent la curiosité. Aujourd’hui la géographie, demain des jeux de cartes et de nouvelles idées — simples, polis, agréables.",
+  "home.hero.lede": "",
   "home.hero.cta": "Voir les jeux",
 
   "home.games.kicker": "Nos jeux",
   "home.games.title": "Ce qu’on construit",
-  "home.games.lede": "Une petite lineup pour l’instant — pensée pour évoluer.",
+  "home.games.lede": "",
 
   "home.about.kicker": "À propos",
   "home.about.title": "Petit studio,\nobsession du détail",
@@ -35,8 +34,7 @@ const fr: Messages = {
 
   "footer.policies": "Politiques",
   "footer.contact": "Contact",
-  "footer.tagline":
-    "Petits jeux mobiles, construits avec soin. Aujourd’hui la géographie, demain les cartes et de nouvelles obsessions.",
+  "footer.tagline": "",
 };
 
 const en: Messages = {

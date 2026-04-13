@@ -4,6 +4,7 @@ import type { Locale } from "@/i18n/messages";
 import { t } from "@/i18n/messages";
 import { CheckCircle2, Shield, Sparkles } from "lucide-react";
 import EarthLottie from "@/components/ui/EarthLottie";
+import { withBasePath } from "../../lib/basePath";
 
 interface GameCardProps {
   game: GameData;
@@ -42,7 +43,7 @@ export default function GameCard({ game, locale }: GameCardProps) {
               <EarthLottie className="flex w-full items-center justify-center bg-[var(--color-accent-dim)] py-6" />
             ) : (
               <img
-                src={`/games/${game.slug}.svg`}
+                src={withBasePath(`/games/${game.slug}.svg`)}
                 alt=""
                 className="h-44 w-full object-cover"
                 loading="lazy"

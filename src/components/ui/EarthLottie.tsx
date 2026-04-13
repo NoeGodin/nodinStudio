@@ -1,6 +1,7 @@
 "use client";
 
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import { withBasePath } from "../../lib/basePath";
 
 interface EarthLottieProps {
   className?: string;
@@ -12,7 +13,7 @@ export default function EarthLottie({ className, speed = 0.55 }: EarthLottieProp
     <div className={className}>
       <div className="mx-auto aspect-square h-full max-h-[180px] w-full max-w-[180px]">
         <DotLottieReact
-          src="/lottie/earth.lottie"
+          src={withBasePath("/lottie/earth.lottie")}
           loop
           autoplay
           speed={speed}

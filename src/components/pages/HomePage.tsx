@@ -1,5 +1,6 @@
 import GameCard from "../ui/GameCard";
 import { getAllGames } from "../../lib/games";
+import { withBasePath } from "../../lib/basePath";
 import { t, type Locale } from "../../i18n/messages";
 import { Sparkles, Gamepad2 } from "lucide-react";
 import NodinWordmarkHero from "../ui/NodinWordmarkHero";
@@ -11,6 +12,8 @@ interface HomePageProps {
 export default function HomePage({ locale }: HomePageProps) {
   const games = getAllGames();
   const badge = t(locale, "home.hero.badge");
+  const heroLede = t(locale, "home.hero.lede");
+  const gamesLede = t(locale, "home.games.lede");
 
   return (
     <>
@@ -21,7 +24,7 @@ export default function HomePage({ locale }: HomePageProps) {
       >
         <div className="pointer-events-none absolute inset-0 -z-10">
           <img
-            src="/hero.svg"
+            src={withBasePath("/hero.svg")}
             alt=""
             className="h-full w-full object-cover opacity-[0.85]"
           />
@@ -43,9 +46,13 @@ export default function HomePage({ locale }: HomePageProps) {
             <NodinWordmarkHero />
           </h1>
 
-          <p className="mb-9 max-w-2xl text-sm leading-relaxed text-zinc-600 sm:text-base">
-            {t(locale, "home.hero.lede")}
-          </p>
+          {heroLede ? (
+            <p className="mb-9 max-w-2xl text-sm leading-relaxed text-zinc-600 sm:text-base">
+              {heroLede}
+            </p>
+          ) : (
+            <div className="mb-7" />
+          )}
 
           <a
             href="#games"
@@ -87,9 +94,11 @@ export default function HomePage({ locale }: HomePageProps) {
           >
             {t(locale, "home.games.title")}
           </h2>
-          <p className="mt-3 max-w-xl text-sm leading-relaxed text-zinc-600">
-            {t(locale, "home.games.lede")}
-          </p>
+          {gamesLede ? (
+            <p className="mt-3 max-w-xl text-sm leading-relaxed text-zinc-600">
+              {gamesLede}
+            </p>
+          ) : null}
         </div>
 
         <div className="space-y-8">
