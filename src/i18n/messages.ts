@@ -23,9 +23,9 @@ const fr: Messages = {
   "home.about.p1":
     "NODIN Studio est un studio indépendant. On aime les jeux courts, fins, que tu ouvres cinq minutes… et qui te gardent vingt.",
   "home.about.p2":
-    "Notre premier jeu, GlobeTrot, transforme la géographie en jeu de découverte. On est une petite équipe, mais chaque détail est travaillé.",
+    "GlobeTrot transforme la géographie en jeu de découverte. WBY crée de vraies conversations à travers des questions profondes. Petite équipe, chaque détail est travaillé.",
   "home.about.p3":
-    "On ne fait que commencer. Plus de jeux, plus d’univers, plus de raisons de sourire en apprenant.",
+    "On ne fait que commencer. Plus de jeux, plus d’univers, plus de raisons de se connecter.",
 
   "game.available": "Disponible",
   "game.comingSoon": "Bientôt",

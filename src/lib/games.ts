@@ -1,3 +1,9 @@
+interface GameTheme {
+  readonly accent: string;
+  readonly accentDim: string;
+  readonly accentInk: string;
+}
+
 interface GameData {
   readonly slug: string;
   readonly name: string;
@@ -7,6 +13,8 @@ interface GameData {
   readonly platforms: readonly Platform[];
   readonly status: "released" | "coming-soon";
   readonly privacyPath: string;
+  readonly presentationImage?: string;
+  readonly theme?: GameTheme;
   readonly privacyPolicy?: PrivacyPolicy;
 }
 
@@ -63,6 +71,7 @@ const GAMES: readonly GameData[] = [
     ],
     status: "released",
     privacyPath: "/privacy/globetrot",
+    presentationImage: "/games/globetrot_presentation.png",
     privacyPolicy: {
       lastUpdated: "April 2026",
       sections: [
@@ -140,6 +149,97 @@ const GAMES: readonly GameData[] = [
       ],
     },
   },
+  {
+    slug: "wby",
+    name: "WBY",
+    tagline: "Des questions qui créent de vraies conversations",
+    description:
+      "Un jeu de cartes de questions profondes pour mieux se connaître — en couple, entre amis, en famille. WBY t'invite à aller au-delà des sujets de surface.",
+    features: [
+      "Des questions en 3 niveaux de profondeur",
+      "Plusieurs univers — couple, amis, famille, solo",
+      "Cartes expansions débloquables",
+      "Mode 2 joueurs ou solo (auto-réflexion)",
+    ],
+    platforms: [
+      {
+        name: "ios",
+        label: "App Store",
+        url: "#",
+      },
+      {
+        name: "android",
+        label: "Google Play",
+        url: "#",
+      },
+    ],
+    status: "coming-soon",
+    privacyPath: "/privacy/wby",
+    theme: {
+      accent: "#002FA7",
+      accentDim: "#E2EAFF",
+      accentInk: "#001E6E",
+    },
+    privacyPolicy: {
+      lastUpdated: "April 2026",
+      sections: [
+        {
+          title: "Overview",
+          blocks: [
+            {
+              type: "paragraph",
+              text: "WBY is a deep-conversation card game developed by NODIN Studio. WBY does not collect, store, or transmit any personal data. This policy explains what that means in practice.",
+            },
+          ],
+        },
+        {
+          title: "No Data Collected",
+          blocks: [
+            {
+              type: "paragraph",
+              text: "WBY collects no personal information whatsoever. No account is required. No name, email address, location, or device identifier is collected or sent to any server. Questions and answers exchanged during gameplay exist only between the players in the room — they are never recorded or transmitted.",
+            },
+          ],
+        },
+        {
+          title: "In-App Purchases",
+          blocks: [
+            {
+              type: "paragraph",
+              text: "Expansion packs are available as in-app purchases processed entirely by Apple App Store or Google Play. NODIN Studio does not collect or store any payment information. All billing is handled by your platform account under Apple's and Google's respective privacy policies.",
+            },
+          ],
+        },
+        {
+          title: "No Third-Party Analytics",
+          blocks: [
+            {
+              type: "paragraph",
+              text: "WBY does not include any analytics SDK, advertising network, or tracking library. No usage data is shared with third parties.",
+            },
+          ],
+        },
+        {
+          title: "Changes to This Policy",
+          blocks: [
+            {
+              type: "paragraph",
+              text: "We may update this policy from time to time. Changes will be reflected on this page with an updated revision date.",
+            },
+          ],
+        },
+        {
+          title: "Contact",
+          blocks: [
+            {
+              type: "paragraph",
+              text: "Questions about this policy? Reach us at hello@nodinstudio.com.",
+            },
+          ],
+        },
+      ],
+    },
+  },
 ] as const;
 
 function getGameBySlug(slug: string): GameData | undefined {
@@ -150,5 +250,5 @@ function getAllGames(): readonly GameData[] {
   return GAMES;
 }
 
-export type { GameData, Platform };
+export type { GameData, GameTheme, Platform };
 export { GAMES, getGameBySlug, getAllGames };

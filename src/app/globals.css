@@ -29,6 +29,25 @@ body {
   mix-blend-mode: multiply;
 }
 
+/* WBY pulsing rings animation */
+.wby-ring {
+  position: absolute;
+  border-radius: 9999px;
+  border: 1.5px solid rgba(0, 47, 167, 0.35);
+  animation: wby-ring-pulse 2.8s ease-out infinite;
+}
+
+@keyframes wby-ring-pulse {
+  0% {
+    opacity: 0.6;
+    transform: scale(0.88);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.08);
+  }
+}
+
 /* Selection */
 ::selection {
   background: rgba(9, 9, 11, 0.12);
