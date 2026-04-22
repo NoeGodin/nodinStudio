@@ -154,12 +154,13 @@ const GAMES: readonly GameData[] = [
     name: "WBY",
     tagline: "Des questions qui créent de vraies conversations",
     description:
-      "Un jeu de cartes de questions profondes pour mieux se connaître — en couple, entre amis, en famille. WBY t'invite à aller au-delà des sujets de surface.",
+      "Un jeu de cartes de questions profondes pour mieux se connaître. Chaque thème t'emmène dans un territoire différent — de l'introspection à la connexion, du deuil amoureux à la première rencontre.",
     features: [
-      "Des questions en 3 niveaux de profondeur",
-      "Plusieurs univers — couple, amis, famille, solo",
-      "Cartes expansions débloquables",
-      "Mode 2 joueurs ou solo (auto-réflexion)",
+      "Thème Date — briser la glace autrement",
+      "Thème Couple — aller plus loin ensemble",
+      "Thème Famille — ce qu'on n'ose pas dire",
+      "Thème Breakup — faire le point",
+      "Thème Self-réflexion — se connaître soi-même",
     ],
     platforms: [
       {
@@ -225,15 +226,6 @@ const GAMES: readonly GameData[] = [
             {
               type: "paragraph",
               text: "We may update this policy from time to time. Changes will be reflected on this page with an updated revision date.",
-            },
-          ],
-        },
-        {
-          title: "Contact",
-          blocks: [
-            {
-              type: "paragraph",
-              text: "Questions about this policy? Reach us at hello@nodinstudio.com.",
             },
           ],
         },
