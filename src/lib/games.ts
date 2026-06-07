@@ -238,8 +238,10 @@ function getGameBySlug(slug: string): GameData | undefined {
   return GAMES.find((game) => game.slug === slug);
 }
 
+const HIDDEN_SLUGS = new Set(["wby"]);
+
 function getAllGames(): readonly GameData[] {
-  return GAMES;
+  return GAMES.filter((game) => !HIDDEN_SLUGS.has(game.slug));
 }
 
 export type { GameData, GameTheme, Platform };
