@@ -13,6 +13,7 @@ interface GameData {
   readonly platforms: readonly Platform[];
   readonly status: "released" | "coming-soon";
   readonly privacyPath: string;
+  readonly gamePath: string;
   readonly presentationImage?: string;
   readonly theme?: GameTheme;
   readonly privacyPolicy?: PrivacyPolicy;
@@ -48,21 +49,18 @@ const GAMES: readonly GameData[] = [
   {
     slug: "globetrot",
     name: "GlobeTrot",
-    tagline: "Test your knowledge of the world",
+    tagline: "Testez vos connaissances en géographie mondiale",
     description:
-      "A geography quiz game that challenges you to identify countries, capitals, and flags from around the globe.",
+      "GlobeTrot transforme la géographie en jeu de découverte. Place les pays sur une vraie carte du monde, reconnais les drapeaux, les capitales et les devises, et explore les régions et villes de chaque pays. Un Défi Quotidien, un mode Voyage par frontières terrestres, des thèmes de carte à débloquer en jouant en Expert -- pour les curieux du globe.",
     features: [
-      "Travel Mode -- rapid-fire geography challenges",
-      "Campaign Mode -- progress through regions and unlock wonders",
-      "Coins & Wonders -- earn rewards and build your collection",
-      "Country, capital, and flag recognition",
+      "Placer le pays -- sur la carte du monde",
+      "Trouver par drapeau, capitale ou devise",
+      "Mode Voyage -- traverse les frontières d'un pays à l'autre",
+      "Carte Interactive -- explore régions et villes par pays",
+      "Défi Quotidien -- une nouvelle partie chaque jour",
+      "Mode Infini + thèmes de carte à débloquer",
     ],
     platforms: [
-      {
-        name: "ios",
-        label: "App Store",
-        url: "#",
-      },
       {
         name: "android",
         label: "Google Play",
@@ -71,6 +69,7 @@ const GAMES: readonly GameData[] = [
     ],
     status: "released",
     privacyPath: "/privacy/globetrot",
+    gamePath: "/games/globetrot",
     presentationImage: "/games/globetrot_presentation.png",
     privacyPolicy: {
       lastUpdated: "April 2026",
@@ -176,6 +175,7 @@ const GAMES: readonly GameData[] = [
     ],
     status: "coming-soon",
     privacyPath: "/privacy/wby",
+    gamePath: "/games/wby",
     theme: {
       accent: "#002FA7",
       accentDim: "#E2EAFF",

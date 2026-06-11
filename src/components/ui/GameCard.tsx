@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { GameData } from "@/lib/games";
 import type { Locale } from "@/i18n/messages";
 import { t } from "@/i18n/messages";
-import { CheckCircle2, Shield, Sparkles } from "lucide-react";
+import { ArrowUpRight, CheckCircle2, Shield, Sparkles } from "lucide-react";
 import EarthLottie from "@/components/ui/EarthLottie";
 import WBYAnimation from "@/components/ui/WBYAnimation";
 import { withBasePath } from "../../lib/basePath";
@@ -32,16 +32,22 @@ export default function GameCard({ game, locale }: GameCardProps) {
 
   return (
     <article
-      className="card-duo group overflow-hidden transition-shadow duration-300 hover:shadow-[0_1px_0_rgba(9,9,11,0.03),0_22px_70px_rgba(9,9,11,0.14)]"
+      className="card-duo group relative overflow-hidden transition-shadow duration-300 hover:shadow-[0_1px_0_rgba(9,9,11,0.03),0_22px_70px_rgba(9,9,11,0.14)]"
       style={themeStyle}
     >
+      <Link
+        href={`${prefix}${game.gamePath}`}
+        aria-label={`${game.name} -- ${t(locale, "game.learnMore")}`}
+        className="absolute inset-0 z-10"
+      />
+
       {/* ── Visual header — preserves native aspect ratio ── */}
       {game.presentationImage ? (
         <div className="overflow-hidden rounded-t-[0.9rem]">
           <img
             src={withBasePath(game.presentationImage)}
             alt={`${game.name} screenshot`}
-            className="h-52 w-full object-cover object-top"
+            className="h-52 w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
             loading="lazy"
           />
         </div>
@@ -74,7 +80,7 @@ export default function GameCard({ game, locale }: GameCardProps) {
                 </span>
                 <Link
                   href={`${prefix}${game.privacyPath}`}
-                  className="inline-flex items-center gap-1.5 text-[11px] font-medium text-zinc-400 transition-colors duration-200 hover:text-zinc-700"
+                  className="relative z-20 inline-flex items-center gap-1.5 text-[11px] font-medium text-zinc-400 transition-colors duration-200 hover:text-zinc-700"
                 >
                   <Shield size={12} />
                   {t(locale, "game.privacy")}
@@ -82,6 +88,11 @@ export default function GameCard({ game, locale }: GameCardProps) {
               </div>
             </div>
             <p className="text-sm text-zinc-500">{game.tagline}</p>
+
+            <span className="mt-3 inline-flex items-center gap-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-[var(--color-accent-ink)] opacity-70 transition-all duration-200 group-hover:gap-1.5 group-hover:opacity-100">
+              {t(locale, "game.learnMore")}
+              <ArrowUpRight size={12} />
+            </span>
           </div>
         </div>
 
@@ -96,7 +107,7 @@ export default function GameCard({ game, locale }: GameCardProps) {
                 <a
                   key={platform.name}
                   href={platform.url}
-                  className="inline-flex items-center gap-2 rounded-full border border-zinc-950/15 bg-white px-4 py-2 text-xs font-semibold text-zinc-800 shadow-[0_1px_0_rgba(9,9,11,0.04)] transition-all duration-200 hover:bg-zinc-950 hover:text-white"
+                  className="relative z-20 inline-flex items-center gap-2 rounded-full border border-zinc-950/15 bg-white px-4 py-2 text-xs font-semibold text-zinc-800 shadow-[0_1px_0_rgba(9,9,11,0.04)] transition-all duration-200 hover:bg-zinc-950 hover:text-white"
                 >
                   {platform.name === "ios" ? <AppleIcon /> : <PlayIcon />}
                   {platform.label}
